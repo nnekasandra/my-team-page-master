@@ -38,9 +38,6 @@ h2{
     line-height: 27px;
     text-transform: uppercase;
 }
-figure{
-    position: relative;
-}
 h2>p{
      width: 200px;
      height: 87px;
@@ -52,8 +49,8 @@ h2>p{
 }
 img{
     max-width: 100%;
-    width: 300px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
 }
 .title{
     font-family: PT Serif;
@@ -61,13 +58,19 @@ img{
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
-    position: absolute;
-    right: 10px;
-    top: 30px;
     text-align: left;
+    width: 120px;
     transform: rotate(90deg);
     text-transform: uppercase;
-
+    float: right;
+    width: 5%;
+    position: relative;
+    right: -30px;
+    top: 10px;
+    margin-right: 10px ;
+}
+.team-mates{
+    width: 95%;
 }
 figcaption{
     height: 27px;
@@ -81,10 +84,10 @@ figcaption{
 .team-members{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
     padding-top: 50px;
 }
-figure:nth-child(2),figure:nth-child(5){
+.team-mates:nth-child(2),.team-mates:nth-child(5){
     padding-top: 40px;
 }
 footer>p{
@@ -96,6 +99,15 @@ footer>p{
     color: #A9A9A9;
     text-align: center;
 }
+footer{
+    margin-top: 30px;
+}
+@media only screen and (min-width:799px){
+.align-left{
+    width: 300px;
+    display: block;
+}
+}
 @media only screen and (max-width:800px){
     div.header{
         display: grid;
@@ -103,14 +115,20 @@ footer>p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 75px);
     }
+    img{
+        height: 400px;
+        width: 550px;
+    }
     .team-members{
         display: grid;
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        text-align: center;
     }
-    figure:nth-child(2),figure:nth-child(5){
+    .team-mates:nth-child(2),.team-mates:nth-child(5){
         padding-top: 0;
     }
-    figure:nth-child(even){
+    .team-mates:nth-child(even){
         padding-top: 35px;
     }
     .align-left{
